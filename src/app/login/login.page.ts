@@ -18,10 +18,12 @@ import { UserModel } from '../models/UserModel';
 export class LoginPage implements OnInit {
 
   listUser: UserModel[] = [
-    new UserModel('Jorge','Gomez','jgomez@gmail.com',undefined,'ALUMNO','jgomez','jorge123'),
-    new UserModel('Juan','Perez','jperez@gmail.com',undefined,'PROFESOR','jperez','juan123'),
+    new UserModel('Camilo','Pulgar','cpulgar@gmail.com',undefined,'ALUMNO','cpulgar','camilo123'),
+    new UserModel('JoseLuis','Gonzalez','jgonzalez@gmail.com',undefined,'ALUMNO','jgonzalez','joseluis123'),
     new UserModel('Carlos','Gomez','cgomez@gmail.com',undefined,'ALUMNO','cgomez','carlos123'),
-    new UserModel('Valentina','Gomez','vgomez@gmail.com',undefined,'PROFESOR','vgomez','valentina123')
+    new UserModel('Armando','Casas','acasas@gmail.com',undefined,'PROFESOR','acasas','armando123'),
+    new UserModel('Roberto','Perez','rperez@gmail.com',undefined,'PROFESOR','rperez','roberto123'),
+    new UserModel('Sara','Cabello','scabello@gmail.com',undefined,'PROFESOR','scabello','scaballo')
   ];
 
   userLoginModal: IUserLogin = {
