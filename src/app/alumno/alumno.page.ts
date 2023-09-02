@@ -5,6 +5,8 @@ import { IonicModule } from '@ionic/angular';
 import { UserModel } from '../models/UserModel';
 import { ActivatedRoute, Router } from '@angular/router';
 
+
+
 @Component({
   selector: 'app-alumno',
   templateUrl: './alumno.page.html',
@@ -25,5 +27,6 @@ export class AlumnoPage implements OnInit {
 
   ngOnInit() {
   }
-
+  public alertButtons = ['OK']
 }
+

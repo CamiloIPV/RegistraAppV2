@@ -1,50 +1,122 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Usuario Page</ion-title>
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-title class="texto1" > RegistrAPP </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" color="light">
+<ion-content [fullscreen]="true" class="ion-content">
 
-  <h1 class="center-content" style="padding-bottom: 50px">Welcome {{ userInfoReceived?.name }}</h1>
-  <ion-list [inset]="true">
-    <ion-list-header>
-      <ion-label>User Information: </ion-label>
-    </ion-list-header>
-    <ion-item>
-      <ion-label>username: {{ userInfoReceived?.username }}</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>name: {{ userInfoReceived?.name }}</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>last name: {{ userInfoReceived?.last_name }}</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>education_level: {{ userInfoReceived?.type }}
-      </ion-label>
-    </ion-item>
-  </ion-list>
+  <!--mensaje de bienvenida-->
 
-  <ion-tabs>
-    <ion-tab-bar slot="bottom">
-      <ion-tab-button tab="home">
-        <ion-icon name="play-circle"></ion-icon>
-        Listen Now
-      </ion-tab-button>
-      <ion-tab-button tab="radio">
-        <ion-icon name="radio"></ion-icon>
-        Radio
-      </ion-tab-button>
-      <ion-tab-button tab="library">
-        <ion-icon name="library"></ion-icon>
-        Library
-      </ion-tab-button>
-      <ion-tab-button tab="search">
-        <ion-icon name="search"></ion-icon>
-        Search
-      </ion-tab-button>
-    </ion-tab-bar>
-  </ion-tabs>
+  <h1 class="center-content" style="padding-bottom: 50px">Bienvenido {{ userInfoReceived?.name }}</h1>
+  
+  <ion-grid >
+    <ion-row>
+
+
+    <!-- tarjeta de toma de QR-->
+      
+      <ion-col size="1"></ion-col>
+      <ion-col  size="10">
+       
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="texto1">Tomar QR</ion-card-title>
+            <ion-card-subtitle class="texto2">No olvides tomar tu asistencia</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content class="center-content">
+            <ion-button id="present-alert" class="texto2">Tomar asistencia</ion-button>
+            <ion-alert
+              trigger="present-alert"
+              header="Próximamente "
+              subHeader="Aquí se abrirá la cámara"
+              message="Ojalá que funcione"
+              [buttons]="alertButtons"
+            ></ion-alert>
+          </ion-card-content>
+        </ion-card>
+
+
+      </ion-col>
+      <ion-col size="1"></ion-col>
+
+      
+      <!--separador -->
+      <ion-col size="12">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </ion-col>
+
+      <!-- Calendario -->
+      <ion-col size="1"></ion-col>
+      <ion-col class="reloj" size="10">
+        <ion-datetime locale="en-GB" hourCycle="h12"></ion-datetime>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+
+
+      <!--separador -->
+      <ion-col size="12">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </ion-col>
+
+
+        <!-- informacion del usuario -->
+      <ion-col size="2"></ion-col>
+      <ion-col size="8">
+        <ion-list-header>
+          <ion-label class="texto1">Información : </ion-label>
+        </ion-list-header>
+      </ion-col>
+      <ion-col size="2"></ion-col>
+  
+
+      <ion-col size="2"></ion-col>
+      <ion-col size="8">
+        <img alt="Imagen de montañas genericas" class="contenedor imagen-redonda " src="./assets/img/card-media.png" />
+      </ion-col>
+      <ion-col size="2"></ion-col>
+    
+      <ion-col size="1"></ion-col>
+      <ion-col size="10"> 
+        
+      <ion-item>
+        <ion-label class="texto2">Usuario: {{ userInfoReceived?.username }}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="texto2">Nombre: {{ userInfoReceived?.name }}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="texto2">Apellido: {{ userInfoReceived?.last_name }}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="texto2">Tipo de Usuario: {{ userInfoReceived?.type }}
+        </ion-label>
+      </ion-item>
+    
+        
+      </ion-col>
+      <ion-col size="1"></ion-col>
+  
+    </ion-row>
+  
+  </ion-grid>
+  
+
+
 
 </ion-content>
+
+
+
