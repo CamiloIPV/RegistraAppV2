@@ -1,58 +1,222 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Administrador Page</ion-title>
+<ion-header>
+  <ion-toolbar class="header">
+    <ion-title class="texto1" > RegistrAPP </ion-title>
+    
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" color="light">
+  <!--Menu oculto-->
+  <ion-menu contentId="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-title>Menu Oculto</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding">Este menu contrenda algo.</ion-content>
+  </ion-menu>
+  
+  <div class="ion-page" id="main-content">
+    <ion-header>
+      <ion-toolbar>
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+        </ion-buttons>
+        <ion-title>Menu</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
+  </div>
 
-  <h1 class="center-content" style="padding-bottom: 50px">Welcome {{ adminInfoReceived?.name }}</h1>
-  <ion-list [inset]="true">
-    <ion-list-header>
-      <ion-label>User Information: </ion-label>
-    </ion-list-header>
-    <ion-item>
-      <ion-label>username: {{ adminInfoReceived?.username }}</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>name: {{ adminInfoReceived?.name }}</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>last name: {{ adminInfoReceived?.last_name }}</ion-label>
-    </ion-item>
-    <ion-item>
-      <ion-label>education_level: {{ adminInfoReceived?.type }}
-      </ion-label>
-    </ion-item>
-  </ion-list>
+
+
+
+<ion-content [fullscreen]="true" class="ion-content">
+
+  <!--mensaje de bienvenida-->
+
+  <h1 class="center-content">Bienvenido {{ adminInfoReceived?.name  }}</h1>
+  
+  <ion-grid >
+    <ion-row>
+
+
+    <!-- tarjeta de seccion-->
+      
+
+
+
+    <ion-col size="1"></ion-col>
+    <ion-col  size="10">
+     
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title class="texto1">Crear sección</ion-card-title>
+          <br>
+          <ion-card-subtitle class="texto2"> Seleccione la clase</ion-card-subtitle>
+        </ion-card-header>
+      
+        <ion-card-content class="center-content">
+          <ion-list>
+
+            <ion-item>
+              <ion-select placeholder="Sección">
+                <div slot="label">Ramo <ion-text color="danger">(Requerido)</ion-text></div>
+                <ion-select-option value="Seccion 01">Sección 01</ion-select-option>
+                <ion-select-option value="Seccion 02">Sección 02</ion-select-option>
+                <ion-select-option value="Seccion 03">Sección 03</ion-select-option>
+              </ion-select>
+            </ion-item>
+
+            <ion-button id="open-loading" class="texto2 center-content">Iniciar sesión</ion-button>
+            <ion-loading trigger="open-loading" message="Cargando..." [duration]="3000" spinner="circles"></ion-loading>
+
+          </ion-list>
+
+        </ion-card-content>
+      </ion-card>
+
+    </ion-col>
+    <ion-col size="1"></ion-col>
+
+      <ion-col size="1"></ion-col>
+      <ion-col  size="10">
+       <!-- tarjeta de toma de QR-->
+        <ion-card>
+          <ion-card-header>
+            <ion-card-title class="texto1">Asistencia</ion-card-title>
+            <br>
+            <ion-card-subtitle class="texto2"> Recuerda crear la seccion antes</ion-card-subtitle>
+          </ion-card-header>
+        
+          <ion-card-content class="center-content">
+            <ion-button id="present-alert" class="texto2">Generar QR</ion-button>
+            <ion-alert
+              trigger="present-alert"
+              header="Próximamente "
+              subHeader="Aquí se abrirá la cámara"
+              message="Ojalá que funcione"
+              [buttons]="alertButtons"
+            ></ion-alert>
+          </ion-card-content>
+        </ion-card>
+
+      </ion-col>
+      <ion-col size="1"></ion-col>
+
+      
+      <ion-col size="12"></ion-col>
+      
+      <ion-col size="1"></ion-col>
+        <ion-col  size="10">
+        
+          <ion-list>
+            <ion-item>
+              <ion-label>Programacion Web</ion-label>
+              <ion-badge color="warning">75%</ion-badge>
+            </ion-item>
+            <ion-item>
+              <ion-label>Etica Profesional</ion-label>
+              <ion-badge color="warning">65%</ion-badge>
+            </ion-item>
+            <ion-item>
+              <ion-label>Emprendimiento</ion-label>
+              <ion-badge color="danger">50%</ion-badge>
+            </ion-item>
+            <ion-item>
+              <ion-label>Inteligencia De Negocios</ion-label>
+              <ion-badge color="success">80%</ion-badge>
+            </ion-item>
+            <ion-item>
+              <ion-label>Gestion De Projectos </ion-label>
+              <ion-badge color="warning">75%</ion-badge>
+            </ion-item>
+    
+          </ion-list>
+
+
+        </ion-col>
+      <ion-col size="1"></ion-col>
+
+
+      
+      <!--separador -->
+      <ion-col size="12">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </ion-col>
+
+      <!-- Calendario -->
+      <ion-col size="1"></ion-col>
+      <ion-col class="reloj" size="10">
+        <ion-datetime locale="en-GB" hourCycle="h12"></ion-datetime>
+      </ion-col>
+      <ion-col size="1"></ion-col>
+
+
+      <!--separador -->
+      <ion-col size="12">
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+      </ion-col>
+
+
+        <!-- informacion del usuario -->
+      <ion-col size="2"></ion-col>
+      <ion-col size="8">
+        <ion-list-header>
+          <ion-label class="texto1">Información : </ion-label>
+        </ion-list-header>
+      </ion-col>
+      <ion-col size="2"></ion-col>
+  
+
+      <ion-col size="2"></ion-col>
+      <ion-col size="8">
+        <img alt="Imagen de montañas genericas" class="contenedor imagen-redonda " src="./assets/img/card-media.png" />
+      </ion-col>
+      <ion-col size="2"></ion-col>
+    
+      <ion-col size="1"></ion-col>
+      <ion-col size="10"> 
+        
+      <ion-item>
+        <ion-label class="texto2">Usuario: {{ adminInfoReceived?.username }}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="texto2">Nombre: {{ adminInfoReceived?.name }}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="texto2">Apellido: {{ adminInfoReceived?.last_name }}</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-label class="texto2">Tipo de Usuario: {{ adminInfoReceived?.type }}
+        </ion-label>
+      </ion-item>
+    
+        
+      </ion-col>
+      <ion-col size="1"></ion-col>
+
+
+
+      <!--separador -->
+      <ion-col size="12">
+        <br />
+        <br />
+      </ion-col>
+  
+    </ion-row>
+  
+  </ion-grid>
+
 
 </ion-content>
-
-
-
-
-<ion-col size="1"></ion-col>
-<ion-col class="reloj" size="10">
- 
-  <ion-button id="popover-button">Open Menu</ion-button>
-  <ion-popover trigger="popover-button" [dismissOnSelect]="true">
-    <ng-template>
-      <ion-content>
-        <ion-list>
-          <ion-item [button]="true" [detail]="false">Option 1</ion-item>
-          <ion-item [button]="true" [detail]="false">Option 2</ion-item>
-          <ion-item [button]="true" id="nested-trigger">More options...</ion-item>
-  
-          <ion-popover trigger="nested-trigger" [dismissOnSelect]="true" side="end">
-            <ng-template>
-              <ion-content>
-                <ion-list>
-                  <ion-item [button]="true" [detail]="false">Nested option</ion-item>
-                </ion-list>
-              </ion-content>
-            </ng-template>
-          </ion-popover>
-        </ion-list>
-      </ion-content>
-    </ng-template>
-  </ion-popover>

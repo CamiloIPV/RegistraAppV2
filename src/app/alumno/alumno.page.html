@@ -1,14 +1,36 @@
 <ion-header>
   <ion-toolbar class="header">
     <ion-title class="texto1" > RegistrAPP </ion-title>
+    
   </ion-toolbar>
 </ion-header>
+
+  <!--Menu oculto-->
+<ion-menu contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Menu Oculto</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">Este menu contrenda algo.</ion-content>
+</ion-menu>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-buttons slot="start">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+      <ion-title>Menu</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding"> Tap the button in the toolbar to open the menu. </ion-content>
+</div>
 
 <ion-content [fullscreen]="true" class="ion-content">
 
   <!--mensaje de bienvenida-->
 
-  <h1 class="center-content" style="padding-bottom: 50px">Bienvenido {{ userInfoReceived?.name }}</h1>
+  <h1 class="center-content">Bienvenido {{ userInfoReceived?.name }}</h1>
   
   <ion-grid >
     <ion-row>
@@ -22,7 +44,8 @@
         <ion-card>
           <ion-card-header>
             <ion-card-title class="texto1">Tomar QR</ion-card-title>
-            <ion-card-subtitle class="texto2">No olvides tomar tu asistencia</ion-card-subtitle>
+            <br>
+            <ion-card-subtitle class="texto2"> Asistencia</ion-card-subtitle>
           </ion-card-header>
         
           <ion-card-content class="center-content">
@@ -40,6 +63,41 @@
 
       </ion-col>
       <ion-col size="1"></ion-col>
+
+      
+      <ion-col size="12"></ion-col>
+      
+      <ion-col size="1"></ion-col>
+        <ion-col  size="10">
+        
+          <ion-list>
+            <ion-item>
+              <ion-label>Programacion Web</ion-label>
+              <ion-badge color="warning">75%</ion-badge>
+            </ion-item>
+            <ion-item>
+              <ion-label>Etica Profesional</ion-label>
+              <ion-badge color="warning">65%</ion-badge>
+            </ion-item>
+            <ion-item>
+              <ion-label>Emprendimiento</ion-label>
+              <ion-badge color="danger">50%</ion-badge>
+            </ion-item>
+            <ion-item>
+              <ion-label>Inteligencia De Negocios</ion-label>
+              <ion-badge color="success">80%</ion-badge>
+            </ion-item>
+            <ion-item>
+              <ion-label>Gestion De Projectos </ion-label>
+              <ion-badge color="warning">75%</ion-badge>
+            </ion-item>
+    
+          </ion-list>
+
+
+        </ion-col>
+      <ion-col size="1"></ion-col>
+
 
       
       <!--separador -->
