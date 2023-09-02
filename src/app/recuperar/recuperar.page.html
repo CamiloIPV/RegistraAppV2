@@ -11,3 +11,16 @@
     </ion-toolbar>
   </ion-header>
 </ion-content>
+
+<ion-content>
+  Bienvenido {{ userInfoReceived?.name }}
+</ion-content>
+
+<ion-content>
+  <ion-input class="" label="Ingresar usuario" placeholder="" [(ngModel)]="userLoginModal.username"></ion-input>
+  <ion-button class="" expand="block" id="present-alert" (click)="recupPass(userLoginModal)">Recuperar Contraseña</ion-button>
+  <ion-alert
+  trigger="present-alert"
+  header="CONTRASEÑA"
+  message="Su contraseña es: {{ userInfoReceived?.password }}"  ></ion-alert>
+</ion-content>
