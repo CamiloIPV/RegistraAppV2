@@ -60,6 +60,29 @@ export class LoginPage implements OnInit {
     
   }
 
+  recupPass(userLoginInfo: IUserLogin): boolean{
+    for(let i = 0; i < this.listUser.length; i++){
+      if((this.listUser[i].username == userLoginInfo.username)){
+        console.log('User Loged...', this.userLoginModal.username);
+        let userInfoSend: NavigationExtras = {
+          state: {
+            user: this.listUser[i]
+          }
+        }
+        if(this.listUser[i].type == 'ALUMNO'){
+          let sendInfo = this.route.navigate(['/recuperar'], userInfoSend);
+          return true;
+        }else{
+          let sendInfo = this.route.navigate(['/recuperar'], userInfoSend);
+          return true;
+        }
+      }
+    }
+    this.userLoginModalRestart();
+    return false;
+    
+  }
+
   userLoginModalRestart(): void{
     this.userLoginModal.username = '';
     this.userLoginModal.password = '';

@@ -29,7 +29,7 @@
         <ion-input class="texto2" label="Ingresar Contraseña:" type="password" value="" [(ngModel)]="userLoginModal.password" maxlength="{{12}}"></ion-input>
         <ion-button class="boton" expand="block" (click)="userLogin(userLoginModal)">Iniciar Sesión</ion-button>
 
-        <ion-button class="boton"  expand="block">Recuperar Contraseña</ion-button>
+        <ion-button class="boton"  expand="block" (click)="recupPass(userLoginModal)">Recuperar Contraseña</ion-button>
         
       </ion-col>
       <ion-col size="1"></ion-col>
