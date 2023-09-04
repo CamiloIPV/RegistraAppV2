@@ -1,0 +1,46 @@
+.center-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ion-grid {
+    
+    right: 1px;
+    left: 1px;
+    top: 1px;
+    bottom: 1px;
+  
+}
+
+
+
+.header{
+--background: #FFB800;
+font-size: 18px;
+text-align: center;
+
+}
+
+.ion-content {
+    --background: #000000;
+}
+
+.texto1{
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+}
+
+.texto2{
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+}
+
+.BotonQR{
+    width: 150px;
+    height: 80px;
+    
+}
+

@@ -4,13 +4,66 @@
     justify-content: center;
 }
 
-ion-input {
-    padding: 50%;
+ion-grid {
+    
+    right: 1px;
+    left: 1px;
+    top: 1px;
+    bottom: 1px;
+  
 }
 
-.example-content {
+.reloj {
+    
     display: flex;
-    align-items: center;
     justify-content: center;
-    height: 100%;
-  }
+    align-items: center;
+  
+}
+
+.header{
+--background: #FFB800;
+font-size: 18px;
+text-align: center;
+
+}
+
+.ion-content {
+    --background: #000000;
+}
+
+.contenedor {
+    width: 150px; /* Ancho del contenedor */
+    height: 150px; /* Altura del contenedor */
+    border-radius: 50%; /* Esto crea un borde redondo */
+    overflow: hidden; /* Oculta cualquier parte de la imagen que salga del contenedor */
+    
+}
+
+.imagen-redonda {
+    width: 100%; /* Ajusta el tamaño de la imagen al tamaño del contenedor */
+    height: auto; /* Mantén la proporción de aspecto de la imagen */
+    display: block; /* Añade esta propiedad */
+    top: 0; /* Añade esta propiedad */
+    left: 0; /* Añade esta propiedad */
+}
+
+.texto1{
+    color: #ffffff;
+    font-size: 24px;
+    text-align: center;
+}
+
+.texto2{
+    color: #ffffff;
+    font-size: 18px;
+    text-align: center;
+}
+
+.BotonQR{
+    width: 150px;
+    height: 80px;
+    
+}
+
+
