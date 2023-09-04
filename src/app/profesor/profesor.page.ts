@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { UserModel } from '../models/UserModel';
 import { Router } from '@angular/router';
+import { ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-profesor',
@@ -22,5 +23,5 @@ export class ProfesorPage implements OnInit {
 
   ngOnInit() {
   }
-
+  public alertButtons = ['OK']
 }
