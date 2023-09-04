@@ -17,9 +17,13 @@ export class ProfesorPage implements OnInit {
 
   adminInfoReceived: UserModel | undefined;
 
-  constructor(private r: Router) {
+  constructor(private r: Router, private router: Router) {
     this.adminInfoReceived = this.r.getCurrentNavigation()?.extras.state?.['user'];
    }
+
+   volverLogin() {
+    this.router.navigate(['/login']);
+  }
 
   ngOnInit() {
   }

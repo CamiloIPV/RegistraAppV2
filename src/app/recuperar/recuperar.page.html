@@ -49,8 +49,11 @@
           <ion-alert
           trigger="present-alert"
           header="CONTRASEÑA"
-          message="Su contraseña es: {{ userInfoReceived?.password }}"  ></ion-alert>
-       
+          message="Su contraseña es: {{ userInfoReceived?.password }}">
+        </ion-alert>
+        <ion-item>
+          <ion-button (click)="volverLogin()" class="boton">Volver al Login</ion-button>
+        </ion-item>
       </ion-col>
       <ion-col size="2"></ion-col>
    

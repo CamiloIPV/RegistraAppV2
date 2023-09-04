@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { UserModel } from '../models/UserModel';
 import { ActivatedRoute, Router } from '@angular/router';
+import { LoginPage } from '../login/login.page';
 
 
 
@@ -23,6 +24,10 @@ export class AlumnoPage implements OnInit {
     this.userInfoReceived = this.router.getCurrentNavigation()?.extras.state?.['user'];
     this.idUserHtmlRouterLink = this.activatedRoute.snapshot.params['id'];
     console.log("Valor obtenido desde URL: ", this.idUserHtmlRouterLink)
+  }
+  
+  volverLogin() {
+    this.router.navigate(['/login']);
   }
 
   ngOnInit() {
