@@ -41,6 +41,10 @@ export class RecuperarPage implements OnInit {
   ngOnInit() {
   }
 
+  volverLogin() {
+    this.router.navigate(['/login']);
+  }
+
   recupPass(userLoginInfo: IUserLogin): boolean{
     for(let i = 0; i < this.listUser.length; i++){
       if((this.listUser[i].username == userLoginInfo.username)){
