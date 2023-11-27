@@ -5,6 +5,8 @@ import { IonicModule } from '@ionic/angular';
 import { UserModel } from '../models/UserModel';
 import { ActivatedRoute, Router } from '@angular/router';
 import { LoginPage } from '../login/login.page';
+import { Camera, CameraResultType, CameraSource } from '@capacitor/camera';
+
 
 
 
@@ -33,5 +35,13 @@ export class AlumnoPage implements OnInit {
   ngOnInit() {
   }
   public alertButtons = ['OK']
-}
 
+  async openCamera() {
+    const image = await Camera.getPhoto({
+      quality: 90,
+      allowEditing: false,
+      resultType: CameraResultType.Uri,
+      source: CameraSource.Camera,
+    });
+}
+}

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { BarcodeScanner } from '@capacitor-community/barcode-scanner';
 import { IonicModule } from '@ionic/angular';
 
 @Component({
